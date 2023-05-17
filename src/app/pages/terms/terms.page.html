@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <form [formGroup]="form">
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Card Title</ion-card-title>
+          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus sem, auctor accumsan egestas sed, venenatis at ex. Nam consequat ex odio, suscipit rhoncus orci dictum eget. Aenean sit amet ligula varius felis facilisis lacinia nec volutpat nulla. Duis ullamcorper sit amet turpis sed blandit. Integer pretium massa eu faucibus interdum
+        </ion-card-content>
+
+        <ion-item>
+          <ion-textarea style="text-align: right;"
+            placeholder="Type something here"
+            [autoGrow]="true"
+            value="קראתי ואני מאשר את התנאים">
+          </ion-textarea>
+          <ion-checkbox formControlName="terms"></ion-checkbox>
+        </ion-item>
+        
+      <ion-button size="full" [disabled]="!form.valid" (click)="submitForm()">Submit</ion-button>
+      </ion-card>
+    </form>
+  </ion-content>
+  
+
+
+
+
+
+  
+</ion-content>

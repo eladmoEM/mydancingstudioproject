@@ -1,0 +1,36 @@
+
+<ion-content class="ion-padding">
+  <div class="image-container">
+    <ion-img id="logo" src="https://i.ibb.co/XX7BV00/removebg-preview.png" alt="Logo"></ion-img>
+  </div>
+
+  <div class="container">
+    <ion-card-header>
+      <ion-card-title>התחברות</ion-card-title>
+    </ion-card-header>
+  
+  <ion-item>
+      <ion-label style="color: gray; font-family: Verdana, Geneva, Tahoma, sans-serif;" slot="end">פלאפון</ion-label>
+      <ion-icon name="call"></ion-icon><ion-input  type="tel"></ion-input>
+      
+    </ion-item>
+    
+
+    <ion-item>
+      <ion-label style="color: gray; font-family: Verdana, Geneva, Tahoma, sans-serif;" slot="end">סיסמא</ion-label>
+      <ion-icon name="finger-print"></ion-icon><ion-input type="password"></ion-input>
+    </ion-item>
+
+      <br> <br> <br>
+      <ion-button color="success" size="full">התחבר</ion-button>
+      <br>
+      <ion-button id="forgot" fill="clear">? שכחת את הסיסמא</ion-button>
+      <hr>
+      <ion-button style="font-weight: bolder; color: black; background-color: rgb(233, 239, 248);" fill="clear" size="full" (click)="navigateToRegister()">הירשמו</ion-button>
+  </div>
+   
+</ion-content>
+
+
+
+
