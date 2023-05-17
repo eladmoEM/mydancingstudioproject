@@ -1,0 +1,7 @@
+{
+  "name": "mydancingstudioproject",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
