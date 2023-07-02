@@ -1,0 +1,55 @@
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  ion-content {
+    // --ion-background-color: #ececec;
+    --ion-background-color: white;
+    
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    
+  }
+
+  .whatsapp {
+    position: relative;
+  }
+  
+  .whatsapp a {
+    position: absolute;
+    right: 10%;
+    transform: translateY(80%);
+  }
+  
+  .whatsapp a img {
+    width: 30px;
+    height: 30px;
+  }
+
+  
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flex-center .waze  {
+    margin: 20px;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .flex-center .instagram {
+    margin: 20px;
+    width: 30px;
+    height: 30px;
+  }

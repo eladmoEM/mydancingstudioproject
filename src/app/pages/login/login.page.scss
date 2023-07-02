@@ -1,0 +1,60 @@
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  ion-content {
+    // --ion-background-color: #ececec;
+    --ion-background-color: white;
+    
+  }
+
+  .container {
+    transform: translateY(-10%);
+  }
+  
+
+ 
+    ion-card-header {
+        display: flex;
+        flex-flow: column-reverse;
+        background-color: white;      
+      }
+
+      ion-card-title {
+        font-size: 40px;
+        color: black;
+        text-align: center;
+        font-family: 'Roboto Thin', sans-serif;
+        font-weight: normal;
+        font-style: italic;
+        
+      }
+
+      ion-card-content {
+        background-color: white;
+      }
+
+      hr {
+        background-color:rgb(192, 192, 192);
+      }
+
+    #forgot {
+      display: flex;
+      align-items: center;
+    }
+
+    ion-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: right;
+      --background: white;
+      color: gray;
+    }
+
+
+ 
