@@ -1,0 +1,71 @@
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+ion-content {
+  // --ion-background-color: #ececec;
+  --ion-background-color: white;
+
+}
+
+.container {
+  transform: translateY(-10%);
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+
+  height: 300px;
+  width: 300px;
+
+  margin: 0 auto;
+}
+
+b {
+  width: 100%;
+}
+
+.ripple-parent {
+  position: relative;
+  overflow: hidden;
+
+  border: 1px solid #ddd;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Added this line to stack the rectangles vertically */
+}
+
+.rectangle {
+  width: 300px;
+  height: 150px;
+  margin-bottom: 18px;
+}
+
+.rounded-rectangle {
+  width: 250px;
+  height: 90px;
+  border-radius: 8px;
+}
+.rounded-rectangle2 {
+  width: 250px;
+  height: 90px;
+  border-radius: 8px;
+}
+
+.circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
