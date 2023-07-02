@@ -4,6 +4,8 @@ import { HttpClient } from '@angular/common/http';
 import { AlertController } from '@ionic/angular';
 import { NgForm } from '@angular/forms';
 import { NavController } from '@ionic/angular';
+import { CheckboxCustomEvent } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-register',
@@ -31,6 +33,12 @@ export class RegisterPage {
   disableSelector2 = false;
   disableSelector3 = false;
   disableSelector4 = false;
+  canDismiss = false;
+  presentingElement: Element | null = null;
+  isContinueButtonVisible = false;
+  isContinueButtonNoNVisible = true;
+  
+  
 
   
 
@@ -39,11 +47,28 @@ export class RegisterPage {
     private http: HttpClient,
     private alertController: AlertController,
     private navCtrl: NavController,
+    private modalController: ModalController,
   ) {}
 
-  goToLoginPage() {
-    this.navCtrl.navigateForward('/terms');
+  ngOnInit() {
+    this.presentingElement = document.querySelector('.ion-page');
   }
+
+  goToLoginPage() {
+    this.navCtrl.navigateForward('/login');
+  }
+
+  onTermsChanged(event: Event) {
+    const ev = event as CheckboxCustomEvent;
+    this.canDismiss = ev.detail.checked;
+  }
+
+  dismissModal() {
+    this.isContinueButtonVisible = true;
+    this.isContinueButtonNoNVisible = false;
+    this.modalController.dismiss();
+  }
+
 
 
   async onClick() {
@@ -109,7 +134,7 @@ export class RegisterPage {
         });
         alert.then((res) => {
           res.present();
-          this.router.navigate(['/terms']);
+          this.router.navigate(['/payment']);
         });
       }, (error: any) => {
         console.log(error);

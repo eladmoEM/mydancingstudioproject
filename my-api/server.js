@@ -46,6 +46,29 @@ app.post('/api/register', (req, res) => {
   });
 });
 
+
+app.post('/api/login', (req, res) => {
+  const phoneNumber = req.body.phoneNumber;
+  const password = req.body.password;
+
+  const sql = 'SELECT * FROM register WHERE phoneNumber = ? AND password = ?';
+  const values = [phoneNumber, password];
+
+  connection.query(sql, values, (error, result) => {
+    if (error) {
+      console.error(error);
+      res.status(500).json({ message: 'Error logging in' });
+    } else {
+      if (result.length > 0) {
+        res.json({ message: 'Login successful!' });
+      } else {
+        res.status(401).json({ message: 'Invalid phoneNumber or password' });
+      }
+    }
+  });
+});
+
+
 connection.connect((err) => {
   if (err) {
     console.error('Error connecting to database: ' + err.stack);

@@ -32,3 +32,15 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     
   }
+
+  .ion-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+ion-modal {
+  --width: 100%;
+  --height: 100%;
+}
