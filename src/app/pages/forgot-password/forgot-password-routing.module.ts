@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -19,3 +20,22 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class ForgotPasswordPageRoutingModule {}
+=======
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+
+import { ForgotPasswordPage } from './forgot-password.page';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: ForgotPasswordPage
+  }
+];
+
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule],
+})
+export class ForgotPasswordPageRoutingModule {}
+>>>>>>> 11a618f7b7d7620233e0fdb6e9786acc38c40500
