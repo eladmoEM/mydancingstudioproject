@@ -14,13 +14,10 @@ const routes: Routes = [
   {
     path: 'forgot-password',
     loadChildren: () => import('./pages/forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
-<<<<<<< HEAD
   },
   {
     path: 'manager',
     loadChildren: () => import('./pages/manager/manager.module').then( m => m.ManagerPageModule)
-=======
->>>>>>> 11a618f7b7d7620233e0fdb6e9786acc38c40500
   }
 ];
 
