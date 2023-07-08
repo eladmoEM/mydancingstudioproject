@@ -1,0 +1,40 @@
+ion-content {
+  --ion-background-color: white;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+ion-card-title {
+  font-size: 28px;
+  color: black;
+  text-align: center;
+  font-family: 'Roboto Thin', sans-serif;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.customer-grid ion-col {
+  background-color: #135d54;
+  border: solid 1px #fff;
+  color: #fff;
+  text-align: center;
+}
+
+.header-col {
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  ion-col {
+    font-size: 12px;
+  }
+}
