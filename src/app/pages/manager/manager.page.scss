@@ -58,11 +58,42 @@ b {
   height: 90px;
   border-radius: 8px;
 }
+.rounded-rectangle img {
+  max-width: 33%;
+  height: auto;
+  position: absolute;
+  top: 5%;
+  transform: translateY(50%);
+  transform: translateX(10%);
+  left: 0;
+}
 .rounded-rectangle2 {
   width: 250px;
   height: 90px;
   border-radius: 8px;
+  position: relative;
 }
+.left-text {
+  position: absolute;
+  right: 0;
+  top: 40%;
+  transform: translateY(-50%);
+  transform: translateX(-5%);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+
+}
+
+.rounded-rectangle2 img {
+  max-width: 33%;
+  height: auto;
+  position: absolute;
+  top: 5%;
+  transform: translateY(50%);
+  transform: translateX(10%);
+  left: 0;
+}
+
 
 .circle {
   width: 90px;
