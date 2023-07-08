@@ -1,8 +1,8 @@
+
 const express = require('express');
 const app = express();
 const mysql = require('mysql');
 const cors = require('cors');
-
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
@@ -69,6 +69,38 @@ app.post('/api/login', (req, res) => {
 });
 
 
+
+
+app.post('/api/reset-password', (req, res) => {
+  const token = req.body.token;
+  const newPassword = req.body.password;
+
+  const sql = 'SELECT * FROM register WHERE resetToken = ? AND resetTokenExpire > ?';
+  const values = [token, Date.now()];
+
+  connection.query(sql, values, (error, result) => {
+    if (error) {
+      console.error(error);
+      res.status(500).json({ message: 'Error verifying token' });
+    } else {
+      if (result.length > 0) {
+        const sqlUpdate = 'UPDATE register SET password = ? WHERE resetToken = ?';
+        const valuesUpdate = [newPassword, token];
+
+        connection.query(sqlUpdate, valuesUpdate, (errorUpdate, resultUpdate) => {
+          if (errorUpdate) {
+            console.error(errorUpdate);
+            res.status(500).json({ message: 'Error resetting password' });
+          } else {
+            res.json({ message: 'Password reset successful!' });
+          }
+        });
+      } else {
+        res.status(401).json({ message: 'Invalid or expired token' });
+      }
+    }
+  });
+});
 connection.connect((err) => {
   if (err) {
     console.error('Error connecting to database: ' + err.stack);
