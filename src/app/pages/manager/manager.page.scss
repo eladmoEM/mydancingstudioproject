@@ -15,6 +15,16 @@ ion-content {
 .container {
     transform: translateY(-10%);
 }
+.back-button {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
 
 .wrapper {
   display: flex;
@@ -68,6 +78,8 @@ b {
   font-weight: bolder;
 
 }
+
+
 .rounded-rectangle img {
   max-width: 33%;
   height: auto;
