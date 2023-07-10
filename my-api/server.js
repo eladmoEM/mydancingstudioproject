@@ -68,6 +68,23 @@ app.post('/api/login', (req, res) => {
   });
 });
 
+app.get('/api/customers', (req, res) => {
+  const query = `
+    SELECT register.parentNames, register.username, register.password, register.email, register.numberOfChildren, children.birthdate, children.gender, 
+    register.phoneNumber, children.childName, children.courseType, children.childID
+    FROM register
+    JOIN children ON register.phoneNumber = children.phoneNumber
+  `;
+
+  connection.query(query, (error, results) => {
+    if (error) {
+      console.error(error);
+      res.status(500).json({ message: 'Error retrieving customer data' });
+    } else {
+      res.json(results);
+    }
+  });
+});
 
 connection.connect((err) => {
   if (err) {
